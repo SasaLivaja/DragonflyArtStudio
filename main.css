@@ -1,0 +1,134 @@
+/* Dragon Fly Arts Custom CSS Style sheet */
+
+html {
+   height: 100%;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   min-height: 100%;
+   font-family: Montserrat, san-serif !important;
+}
+.outer-frame {
+   max-width: 1600px !important; 
+   width: 100% !important;
+   height: calc(100vh - 80px);
+   margin: 0 auto !important;
+   margin-bottom: 40px !important;
+   overflow: hidden;
+}
+ul.topnav {
+   display: flex;
+   width: 100%;
+   justify-content: space-evenly;
+}
+ul.topnav li {
+   list-style: none;
+   background-color: #5c0f0f;
+   border-bottom-left-radius: 6px;
+   border-bottom-right-radius: 6px;
+   width: 25%;
+}
+ul.topnav li a {
+   display: block;
+   height: 35px;
+   color: whitesmoke;
+   font-weight: 200;
+   text-align: center;
+   letter-spacing: 1px;
+   font-size: 16px;
+   padding: 8px;
+   text-decoration: none;
+   border-right: 01px solid thistle;
+}
+ul.topnav li a:hover:not(.active) {
+   font-weight: 600;
+}
+ul.topnav li a.active {
+   font-weight: 400;
+   background-color: teal;
+}
+/* DROPDOWN */
+.topnav ul {
+   background-color: #5c0f0f;
+   border-right: none;
+   list-style: none;
+   position: absolute;
+   width: 25%;
+   top: -9999px;   
+}
+.topnav ul li {
+   width: 100%;
+   float: none;
+   border-top: 1px solid thistle;
+}
+.topnav ul a {
+   width: auto;
+   white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+.topnav li:hover ul {
+   top: 40px;
+   transition: all 250ms;
+}
+.topnav li:hover a {
+   background-color: #5c0f0f;
+}
+.topnav li:hover ul a {
+   text-decoration: none;
+} 
+.topnav li:hover ul li a:hover {
+   background-color: #5c0f0f;
+   width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+   ul.topnav {
+      display: flex;
+      flex-flow: column;
+      width: 30%;
+      float: left;
+   }
+   li {
+      border-bottom: 1px  solid goldenrod !important;
+      height: 45px;
+      border-right: none !important;
+   }
+}
+.footer-flex {
+   display: flex;
+   max-width: 1600px;
+   height: 40px;
+   background-color: teal;
+   color: whitesmoke;
+   margin: 0 auto;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Index Stylesheet */
+.index-flex {
+   display: flex;
+   flex-flow: column;
+   width: 100%;
+   max-width: 1600px;
+}
+.img-index {
+   height: 500px;
+   background-image: url("./IMG_1012.jpeg");
+   background-color: lightseagreen;
+   background-size: cover;
+   grid-area: header;
+}
+.index-title {
+   font-size: 30px;
+   margin-top: 40px;
+   text-align: center;
+}
+.index-text {
+   font-size: 16px;
+   margin-top: 40px;
+   text-align: center;
+}
